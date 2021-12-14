@@ -1,0 +1,16 @@
+.next-link {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .next-link:hover {
+    background: #0275D8;
+    color: #FFFFFF;
+  }
+  
+  h3, img {
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+  }

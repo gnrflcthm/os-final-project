@@ -1,0 +1,26 @@
+
+.return-btn {
+    top: 50%;
+    transform: translateY(-70%);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.return-btn-text {
+    border-bottom: 1px solid black;
+    transition: all 0.2s ease;
+}
+
+.return-btn i {
+    transition: all 0.2s ease;
+}
+
+.return-btn:hover > i {
+    color: #0275D8;
+}
+
+.return-btn:hover > .return-btn-text {
+    color: #0275D8;
+    border-color: #0275D8;
+}
