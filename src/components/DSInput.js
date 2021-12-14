@@ -21,7 +21,7 @@ function DiskSchedulingOutput({ updateDiskSchedData, onCompute }) {
             trackSize,
             headPosition,
             seekRate,
-            requestLocations: [... new Set(requestLocations)],
+            requestLocations: [...new Set(requestLocations)],
             direction,
         });
     }, [headPosition, trackSize, seekRate, requestLocations, direction]);

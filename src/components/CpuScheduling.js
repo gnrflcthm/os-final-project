@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useTransition, animated } from "react-spring";
-import { cpuAlgo } from "../utils/algorithms";
 import CSInput from "./CSInput";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -33,7 +32,13 @@ function CpuScheduling({ onReturn }) {
                 {transition((styles, item) => {
                     let component = null;
                     switch (item) {
+                        case "CSOutput":
+                            component = (
+                                <CSOutput input={cpuSchedData} />
+                            );
+                            break;
                         case "CSInput":
+                        default: 
                             component = (
                                 <CSInput
                                     updateCpuSchedData={(data) =>
@@ -45,11 +50,7 @@ function CpuScheduling({ onReturn }) {
                                 />
                             );
                             break;
-                        case "CSOutput":
-                            component = (
-                                <CSOutput input={cpuSchedData} />
-                            );
-                            break;
+
                     }
                     return (
                         <animated.div style={styles}>{component}</animated.div>

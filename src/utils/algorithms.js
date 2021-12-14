@@ -22,6 +22,7 @@ function scanAlgo({requestLocations, headPosition, direction, seekRate, trackSiz
             }
             break;
         case "descending":
+        default:
             i = -1;
             while (seekSequence.length < requestLocations.length) {
                 if (locations.includes(position) && !seekSequence.includes(position)) {

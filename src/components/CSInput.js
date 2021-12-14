@@ -76,7 +76,7 @@ function CSInput({ updateCpuSchedData, onCompute }) {
             if (values.includes(NaN)) {
                 setInvalidBurstTime(true);
             } else {
-                if (values.some((val) => val <= 0) || (arrivalTime.length > 0 && arrivalTime.length != values.length) || values.length <= 1) {
+                if (values.some((val) => val <= 0) || (arrivalTime.length > 0 && arrivalTime.length !== values.length) || values.length <= 1) {
                     setInvalidBurstTime(true);
                 } else {
                     setInvalidBurstTime(false);
