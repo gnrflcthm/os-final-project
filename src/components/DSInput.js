@@ -24,6 +24,7 @@ function DiskSchedulingOutput({ updateDiskSchedData, onCompute }) {
             requestLocations: [...new Set(requestLocations)],
             direction,
         });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [headPosition, trackSize, seekRate, requestLocations, direction]);
 
     useEffect(() => {

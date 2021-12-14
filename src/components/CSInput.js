@@ -25,10 +25,11 @@ function CSInput({ updateCpuSchedData, onCompute }) {
             burstTime,
             quantumTime,
         });
-    }, [arrivalTime, burstTime, quantumTime]);
+    }, [algorithm, arrivalTime, burstTime, quantumTime, updateCpuSchedData]);
 
     useEffect(() => {
         updateBurstTime(burstTime.join(" "));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [arrivalTime])
 
     useEffect(() => {
